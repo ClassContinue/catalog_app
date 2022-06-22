@@ -1,3 +1,4 @@
+import 'package:app1/Home_Page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,15 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int id = 88;
-    String name = "Bhavik Limbani";
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(),
-        body: Center(
-          child: Text("Your Id Is : $id & Name Is : $name"),
-        ),
-      ),
-    );
+    return const HomePage();
   }
 }
