@@ -1,4 +1,6 @@
-import 'package:app1/Pages/homepage.dart';
+import 'package:app1/pages/demo.dart';
+import 'package:app1/pages/home.dart';
+import 'package:app1/pages/loginpage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,7 +21,14 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
-      home: const HomePage(),
+      //home:const Home(),
+     initialRoute: "/",
+      routes: {
+        "/":(context)=>const Home(),
+        "/login":(context) =>const LoginPage(),
+        "/demo":(context) =>const Demo(),
+      },
     );
+    
   }
 }
