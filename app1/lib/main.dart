@@ -1,4 +1,5 @@
 import 'package:app1/pages/demo.dart';
+import 'package:app1/pages/error.dart';
 import 'package:app1/pages/home.dart';
 import 'package:app1/pages/loginpage.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,11 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       //home:const Home(),
-     initialRoute: "/",
+     initialRoute: "/my",
+      onGenerateRoute: (settings) {
+        return MaterialPageRoute(
+            builder: (BuildContext context) =>const ErrorPage());
+      },
       routes: {
         "/":(context)=>const Home(),
         "/login":(context) =>const LoginPage(),
